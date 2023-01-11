@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  pythonapp:
+    container_name: python
+    build: ./python
+    volumes:
+      - .:/app
+    ports:
+      - 5000:80
+    
+  mysql:
+    container_name: mysql
+    image: mysql:latest
+    ports:
+      - 80:80
+    
